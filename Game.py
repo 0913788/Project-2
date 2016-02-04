@@ -1038,6 +1038,22 @@ def help_loop():
         pygame.display.update()
         clock.tick(60)
 
+def loop_pause(aantal):
+    count = 0
+    while count < aantal:
+        for event in pygame.event.get():
+            if event.type == pygame.QUIT:
+                pygame.quit()
+                quit()
+            if event.type == pygame.KEYDOWN:
+                if event.key == pygame.K_ESCAPE:
+                    pause_screen()
+                if event.key == pygame.K_h:
+                    manual()
+
+        count = count + 1
+        clock.tick(60)
+
 def pause_screen():
     global pause
 
