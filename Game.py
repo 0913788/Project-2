@@ -940,7 +940,7 @@ def Ai_fight(starter, target):
     if target.Value.Player == True:
         choice = []
         for i in range(3):
-            if target.Value.Conditie - target.Value.Damage[x - 1][i + 3] >= 0:
+            if (target.Value.Conditie - target.Value.Damage[x - 1][i + 3]) >= 0:
                 choice.append(i)
 
         if len(choice) == 0:
@@ -997,6 +997,8 @@ def Calc_parameters(starter, target, start_dmg, target_dmg):
             pygame.display.update(camera5)
     if target.Value.Player:
         canvas.fill((255,255,255), camera7)
+        if target.Value.Conditie<0:
+            target.Value.Conditie=0
         canvas.blit(cp_dict["CP_{}".format(target.Value.Conditie)], (365, 350))
         pygame.display.update(camera7)
 
