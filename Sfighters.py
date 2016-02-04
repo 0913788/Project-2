@@ -58,6 +58,7 @@ def create_fighters():
     for i in range(len(name_fighter and damage_fighter)):
         super_fighters = Node(
             Superfighter(name_fighter[i], damage_fighter[i], "content/superfighters/{}.png".format(Texture[i]),
+                         "content/superfighters/Mid_fight/Wesely Sniper.png",
                          "content/superfighters/Mid_fight/{}.png".format(Face[i])), super_fighters)
 
     return super_fighters
