@@ -3,7 +3,7 @@
 import webbrowser
 
 from Common import *
-from HP import *
+from HP_CP import *
 from Player import *
 from Sfighters import *
 from Tile import *
